@@ -1,0 +1,419 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: black;
+  background-color: white;
+  font-family: fantasy, sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+a {
+  color: midnightblue;
+  text-decoration: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.button {
+  color: black;
+  display: inline-block;
+  background-color: lightblue;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.icon-button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* STYLING THE HEADER */
+.header {
+  background-color: lightblue;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  height: 100%;
+  padding: 10px 25px;
+}
+
+.header .search {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header .search .icon-button {
+  margin: 0 25px 0 10px;
+}
+
+.header .search input:focus {
+  outline: none;
+}
+
+.header .nav {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  font-family: Codystar;
+}
+
+.layout {
+  display: flex;
+  padding: 25px;
+  position: relative;
+}
+
+/* STYLING THE TEXT */
+
+.intro {
+  text-align: center;
+  margin: 50px 25px;
+}
+
+.explanation {
+  padding: 20px 25px;
+  margin: 0;
+  background-color: lightblue;
+}
+
+.mw-ad {
+  padding: 0 25px;
+}
+
+/* STYLING FOR THE SIDE NAVIGATION */
+.sidenav {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding-top: 25px;
+  align-items: flex-start;
+}
+
+.sidenav .category {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: Codystar;
+}
+
+.shopping-cart {
+  width: 30px;
+  height: 30px;
+  margin-top: 50px;
+}
+
+.reset-button {
+  opacity: 0;
+}
+
+/* STYLING THE CARDS */
+
+/* Defining the layout in which all cards are shown*/
+.cards-container {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Styling each card */
+.card {
+  width: 250px;
+  height: 430px;
+  border: 3px solid gray;
+  border-radius: 5px;
+  padding: 10px 10px 25px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.card img {
+  width: 230px;
+  height: 170px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card h1 {
+  font-family: 'Rubik Microbe';
+  font-weight: 100;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-family: 'Splash';
+}
+
+.placeholder {
+  height: 100%;
+  flex-shrink: 100;
+}
+
+/* STYLING FOR THE COLOR SELECTION */
+
+/* Hide the default radio button */
+.radio-container input {
+  display: none;
+}
+
+/* Prepare the box containing the color */
+.radio-container {
+  width: 20px;
+  height: 20px;
+  border: 2px black solid;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Style the checkmark/indicator which is per default hidden */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 2px;
+  width: 5px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+/* Show the checkmark when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Add the color to the boxes */
+.radio-container.red {
+  background-color: red;
+}
+
+.radio-container.green {
+  background-color: green;
+}
+
+.radio-container.blue {
+  background-color: blue;
+}
+
+.radio-container.yellow {
+  background-color: yellow;
+}
+
+.radio-container.pink {
+  background-color: pink;
+}
+
+.radio-container.purple {
+  background-color: purple;
+}
+
+.radio-container.turquoise {
+  background-color: turquoise;
+}
+
+/* Add the layout to the color boxes*/
+.colors {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+/* STYLING THE FEEDBACK FORM */
+.feedback-container {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feedback-container textarea {
+  width: 500px;
+  height: 200px;
+  margin-top: -20px;
+}
+
+.feedback-container .button {
+  background-color: white;
+}
+
+#last-name,
+#first-name,
+#captcha {
+  border: 1px solid purple;
+  border-radius: 2px;
+}
+
+input[error='true'] {
+  border-color: red !important;
+}
+
+#captcha {
+  width: 30px;
+}
+
+.microcopy {
+  font-size: 8px;
+  color: grey;
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+/* STYLING THE BLINKING OFFER AD */
+.offer-note {
+  animation: attention 500ms linear 0s infinite normal forwards;
+  text-align: center;
+  font-family: 'Rubik Microbe';
+  font-weight: 100;
+  font-size: 60px;
+}
+
+@keyframes attention {
+  0% {
+    color: darkred;
+    margin-left: 20px;
+  }
+
+  30% {
+    color: lightblue;
+  }
+
+  70% {
+    color: darkred;
+  }
+
+  100% {
+    color: lightblue;
+  }
+}
+
+/* STYLING THE MODALS */
+
+/* Adding the darker overlay and setting the layout hiding the modal by default */
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#shopping-cart-modal-container {
+  display: none;
+}
+
+/* Show the modal when it has the class .visible */
+.modal-container.visible {
+  display: flex !important;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the actual modal */
+.imprint-modal,
+.shopping-cart-modal {
+  background-color: gainsboro;
+  color: lightgray;
+  border-radius: 5px;
+  padding: 20px;
+  width: 500px;
+  text-align: center;
+}
+
+.shopping-cart-modal {
+  color: red;
+}
+
+#shopping-cart-close {
+  float: right;
+}
+
+.imprint-modal h1 {
+  margin: 0;
+}
+
+/* STYLING FOR THE SLIDESHOW */
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+.image-text {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  font-size: 80px;
+  font-family: 'Splash';
+  color: darkred;
+  user-select: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
